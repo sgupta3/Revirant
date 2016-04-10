@@ -16,6 +16,7 @@
 		D818D9531CBA258500A8F202 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D818D9521CBA258500A8F202 /* CoreLocation.framework */; };
 		D818D95D1CBA348700A8F202 /* RRUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = D818D95C1CBA348700A8F202 /* RRUtilities.m */; };
 		D89501E01CBA3D7F0001FEB5 /* NSURLRequest+OAuth.m in Sources */ = {isa = PBXBuildFile; fileRef = D89501DF1CBA3D7F0001FEB5 /* NSURLRequest+OAuth.m */; };
+		D89501E31CBA42C80001FEB5 /* YelpAPINetworkClient.m in Sources */ = {isa = PBXBuildFile; fileRef = D89501E21CBA42C80001FEB5 /* YelpAPINetworkClient.m */; };
 		E7F7F3F86C1BB929B5D4DE6E /* libPods-Revirant.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 68BF82FBB2A95233BADEDE9F /* libPods-Revirant.a */; };
 /* End PBXBuildFile section */
 
@@ -38,6 +39,8 @@
 		D818D95C1CBA348700A8F202 /* RRUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RRUtilities.m; sourceTree = "<group>"; };
 		D89501DE1CBA3D7F0001FEB5 /* NSURLRequest+OAuth.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURLRequest+OAuth.h"; sourceTree = "<group>"; };
 		D89501DF1CBA3D7F0001FEB5 /* NSURLRequest+OAuth.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURLRequest+OAuth.m"; sourceTree = "<group>"; };
+		D89501E11CBA42C80001FEB5 /* YelpAPINetworkClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YelpAPINetworkClient.h; sourceTree = "<group>"; };
+		D89501E21CBA42C80001FEB5 /* YelpAPINetworkClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YelpAPINetworkClient.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +100,8 @@
 				D818D95C1CBA348700A8F202 /* RRUtilities.m */,
 				D89501DE1CBA3D7F0001FEB5 /* NSURLRequest+OAuth.h */,
 				D89501DF1CBA3D7F0001FEB5 /* NSURLRequest+OAuth.m */,
+				D89501E11CBA42C80001FEB5 /* YelpAPINetworkClient.h */,
+				D89501E21CBA42C80001FEB5 /* YelpAPINetworkClient.m */,
 			);
 			path = Revirant;
 			sourceTree = "<group>";
@@ -242,6 +247,7 @@
 				D818D9411CBA22E500A8F202 /* ViewController.m in Sources */,
 				D818D93E1CBA22E500A8F202 /* AppDelegate.m in Sources */,
 				D89501E01CBA3D7F0001FEB5 /* NSURLRequest+OAuth.m in Sources */,
+				D89501E31CBA42C80001FEB5 /* YelpAPINetworkClient.m in Sources */,
 				D818D93B1CBA22E500A8F202 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
