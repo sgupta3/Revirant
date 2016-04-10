@@ -10,8 +10,9 @@
 #import "RRUtilities.h"
 #import "YelpAPINetworkClient.h"
 #import "RRBusinessSummaryCollectionViewCell.h"
+#import "RRBusinessSummary.h"
 
-static const CGFloat kFMImageSelectionCellSpacing = 4.0;
+static const CGFloat kRRBusinessSummaryCellSpacing = 4.0;
 
 @interface ViewController () <CLLocationManagerDelegate, UISearchBarDelegate>
 @property (strong, nonatomic) CLLocationManager *locationManager;
@@ -19,6 +20,7 @@ static const CGFloat kFMImageSelectionCellSpacing = 4.0;
 @property (strong,nonatomic) NSString *queryString;
 @property (strong, nonatomic) CLLocation *currentLocation;
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
+@property (nonatomic, strong) NSMutableArray *businessSummaries;
 @end
 
 @implementation ViewController
@@ -34,6 +36,7 @@ static const CGFloat kFMImageSelectionCellSpacing = 4.0;
     self.locationManager = [[CLLocationManager alloc] init];
     self.locationManager.delegate = self;
     self.locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+    
 }
 
 #pragma mark - Search Bar
@@ -50,12 +53,15 @@ static const CGFloat kFMImageSelectionCellSpacing = 4.0;
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return 15;
+    return self.businessSummaries.count;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     RRBusinessSummaryCollectionViewCell *cell = (RRBusinessSummaryCollectionViewCell *)[collectionView dequeueReusableCellWithReuseIdentifier:@"Cell" forIndexPath:indexPath];
-    
+    RRBusinessSummary *currentSummary = [self.businessSummaries objectAtIndex:indexPath.row];
+    [cell businessImageFromUrl:[currentSummary imageUrl]];
+    cell.businessName.text = [currentSummary name];
+    cell.businessAddress.text = [currentSummary address];
     return cell;
 }
 
@@ -104,7 +110,7 @@ static const CGFloat kFMImageSelectionCellSpacing = 4.0;
     YelpAPINetworkClient *client = [[YelpAPINetworkClient alloc] init];
     [client queryBusinessesWithTerm:term location:location
                         withSuccess:^(NSArray *businesses) {
-                            NSLog(@"%@", businesses);
+                            [self sortAndProccessBusinessesArray:businesses];
                         } error:^(NSError *error) {
                             NSLog(@"%@",error);
                         } always:^{
@@ -112,7 +118,22 @@ static const CGFloat kFMImageSelectionCellSpacing = 4.0;
                         } session:[NSURLSession sharedSession]];
 }
 
-#pragma mark Collection view flow layout delegate
+#pragma mark - Helpers
+-(void) sortAndProccessBusinessesArray:(NSArray *)data {
+    
+    NSSortDescriptor *brandDescriptor = [[NSSortDescriptor alloc] initWithKey:@"name" ascending:YES];
+    data = [data sortedArrayUsingDescriptors:[NSArray arrayWithObject:brandDescriptor]];
+    
+    self.businessSummaries = [[NSMutableArray alloc] init];
+
+    [data enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        RRBusinessSummary *summary = [[RRBusinessSummary alloc] initWithDictionary:obj];
+        [self.businessSummaries addObject:summary];
+    }];
+    [self.collectionView reloadData];
+}
+
+#pragma mark - Collection view flow layout delegate
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
     NSInteger numColumns = 2;
@@ -128,11 +149,11 @@ static const CGFloat kFMImageSelectionCellSpacing = 4.0;
 }
 
 - (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section {
-    return kFMImageSelectionCellSpacing;
+    return kRRBusinessSummaryCellSpacing;
 }
 
 - (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section {
-    return kFMImageSelectionCellSpacing;
+    return kRRBusinessSummaryCellSpacing;
 }
 
 - (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section {

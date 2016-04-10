@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Revirant-->
@@ -46,18 +47,61 @@
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SWk-Np-ehl">
                                                     <rect key="frame" x="0.0" y="0.0" width="280" height="236"/>
                                                 </imageView>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iCA-mG-vnb">
+                                                    <rect key="frame" x="0.0" y="0.0" width="280" height="238"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.5" colorSpace="calibratedWhite"/>
+                                                </view>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="location" translatesAutoresizingMaskIntoConstraints="NO" id="0Qg-eY-Hsf">
+                                                    <rect key="frame" x="28" y="198" width="25" height="25"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="25" id="atw-X0-xqR"/>
+                                                        <constraint firstAttribute="width" constant="25" id="fTB-T8-olH"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lwy-mi-v3k">
+                                                    <rect key="frame" x="63" y="201" width="209" height="18.5"/>
+                                                    <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="11"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h7F-Vx-ipZ">
+                                                    <rect key="frame" x="28" y="170.5" width="244" height="22.5"/>
+                                                    <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <constraints>
                                             <constraint firstItem="SWk-Np-ehl" firstAttribute="leading" secondItem="DPb-5L-ZXW" secondAttribute="leading" id="0IM-uF-Fku"/>
+                                            <constraint firstItem="0Qg-eY-Hsf" firstAttribute="leading" secondItem="DPb-5L-ZXW" secondAttribute="leadingMargin" constant="20" id="6wy-EF-RyY"/>
+                                            <constraint firstItem="h7F-Vx-ipZ" firstAttribute="leading" secondItem="DPb-5L-ZXW" secondAttribute="leadingMargin" constant="20" id="I3x-iV-gI4"/>
+                                            <constraint firstItem="iCA-mG-vnb" firstAttribute="leading" secondItem="DPb-5L-ZXW" secondAttribute="leading" id="JPT-ye-xaR"/>
+                                            <constraint firstAttribute="bottomMargin" secondItem="0Qg-eY-Hsf" secondAttribute="bottom" constant="5" id="TQB-Gw-Gzz"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="Lwy-mi-v3k" secondAttribute="trailing" id="WgM-ME-k0C"/>
+                                            <constraint firstItem="0Qg-eY-Hsf" firstAttribute="top" secondItem="h7F-Vx-ipZ" secondAttribute="bottom" constant="5" id="YRD-mE-48U"/>
+                                            <constraint firstItem="Lwy-mi-v3k" firstAttribute="leading" secondItem="0Qg-eY-Hsf" secondAttribute="trailing" constant="10" id="Z0v-u6-nE7"/>
+                                            <constraint firstItem="iCA-mG-vnb" firstAttribute="top" secondItem="DPb-5L-ZXW" secondAttribute="top" id="cM6-oL-cv4"/>
                                             <constraint firstItem="SWk-Np-ehl" firstAttribute="top" secondItem="DPb-5L-ZXW" secondAttribute="top" id="fMG-UR-q9z"/>
+                                            <constraint firstItem="0Qg-eY-Hsf" firstAttribute="top" secondItem="iCA-mG-vnb" secondAttribute="bottom" id="gqk-We-ycF"/>
                                             <constraint firstAttribute="bottom" secondItem="SWk-Np-ehl" secondAttribute="bottom" id="hIo-hv-z4B"/>
+                                            <constraint firstItem="Lwy-mi-v3k" firstAttribute="centerY" secondItem="0Qg-eY-Hsf" secondAttribute="centerY" id="j52-RO-PQS"/>
+                                            <constraint firstAttribute="bottomMargin" secondItem="iCA-mG-vnb" secondAttribute="bottom" constant="-10" id="ojy-a3-vc6"/>
+                                            <constraint firstAttribute="trailing" secondItem="iCA-mG-vnb" secondAttribute="trailing" id="sSS-cW-uVg"/>
                                             <constraint firstAttribute="trailing" secondItem="SWk-Np-ehl" secondAttribute="trailing" id="wxu-et-QPO"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="h7F-Vx-ipZ" secondAttribute="trailing" id="y7d-8W-IK9"/>
                                         </constraints>
                                         <size key="customSize" width="280" height="236"/>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="gqk-We-ycF"/>
+                                            </mask>
+                                        </variation>
                                         <connections>
+                                            <outlet property="businessAddress" destination="Lwy-mi-v3k" id="OMc-45-4F9"/>
                                             <outlet property="businessImage" destination="SWk-Np-ehl" id="207-lW-NAO"/>
+                                            <outlet property="businessName" destination="h7F-Vx-ipZ" id="2q2-OS-T6E"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -108,4 +152,7 @@
             <point key="canvasLocation" x="380" y="-378"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="location" width="48" height="48"/>
+    </resources>
 </document>
