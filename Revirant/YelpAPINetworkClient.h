@@ -19,5 +19,11 @@
                                     always:(void (^)())alwaysHandler
                                     session:(NSURLSession *)session;
 
+- (NSURLSessionTask *) queryBusinessesWithbusinessID:(NSString *)businessID
+                                   withSuccess:(void (^)(NSDictionary *businessesInfo))successHandler
+                                         error:(void (^)(NSError *error))errorHandler
+                                        always:(void (^)())alwaysHandler
+                                       session:(NSURLSession *)session;
+
 
 @end

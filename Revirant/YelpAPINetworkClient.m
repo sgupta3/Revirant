@@ -46,6 +46,28 @@ static NSString * const kSearchLimit       = @"10";
     return task;
 }
 
+- (NSURLSessionTask *) queryBusinessesWithbusinessID:(NSString *)businessID
+                                         withSuccess:(void (^)(NSDictionary *businessInfo))successHandler
+                                               error:(void (^)(NSError *error))errorHandler
+                                              always:(void (^)())alwaysHandler
+                                             session:(NSURLSession *)session {
+    
+    NSURLRequest *businessInfoRequest = [self _businessInfoRequestForID:businessID];
+    NSURLSessionTask *task = [session dataTaskWithRequest:businessInfoRequest
+                                        completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+                                            NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *)response;
+                                            
+                                            if(!error && httpResponse.statusCode == 200) {
+                                                NSDictionary *businessInfo = [NSJSONSerialization JSONObjectWithData:data options:0 error:&error];
+                                                [self callHandlerIfNotNil:successHandler withArgument:businessInfo];
+                                            } else {
+                                                [self callHandlerIfNotNil:errorHandler withArgument:error];
+                                            }
+                                        }];
+    [self callHandlerIfNotNil:alwaysHandler];
+    [task resume];
+    return task;
+}
 
 #pragma mark - API Request Builders
 
