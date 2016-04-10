@@ -26,9 +26,49 @@
                                     <string>Title</string>
                                 </scopeButtonTitles>
                             </searchBar>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="zxJ-6U-M3a">
+                                <rect key="frame" x="0.0" y="108" width="600" height="492"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="4tl-2h-Xg6">
+                                    <size key="itemSize" width="280" height="236"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="DPb-5L-ZXW" customClass="RRBusinessSummaryCollectionViewCell">
+                                        <rect key="frame" x="0.0" y="0.0" width="280" height="236"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="280" height="236"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SWk-Np-ehl">
+                                                    <rect key="frame" x="0.0" y="0.0" width="280" height="236"/>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="SWk-Np-ehl" firstAttribute="leading" secondItem="DPb-5L-ZXW" secondAttribute="leading" id="0IM-uF-Fku"/>
+                                            <constraint firstItem="SWk-Np-ehl" firstAttribute="top" secondItem="DPb-5L-ZXW" secondAttribute="top" id="fMG-UR-q9z"/>
+                                            <constraint firstAttribute="bottom" secondItem="SWk-Np-ehl" secondAttribute="bottom" id="hIo-hv-z4B"/>
+                                            <constraint firstAttribute="trailing" secondItem="SWk-Np-ehl" secondAttribute="trailing" id="wxu-et-QPO"/>
+                                        </constraints>
+                                        <size key="customSize" width="280" height="236"/>
+                                        <connections>
+                                            <outlet property="businessImage" destination="SWk-Np-ehl" id="207-lW-NAO"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="zxJ-6U-M3a" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="32m-cx-j9k"/>
+                            <constraint firstAttribute="trailing" secondItem="zxJ-6U-M3a" secondAttribute="trailing" id="QMa-uP-xcq"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="zxJ-6U-M3a" secondAttribute="bottom" id="XYQ-QL-1RA"/>
+                            <constraint firstItem="zxJ-6U-M3a" firstAttribute="top" secondItem="dBx-4E-435" secondAttribute="bottom" id="bII-HE-KOL"/>
                             <constraint firstItem="dBx-4E-435" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="j8U-vQ-yGa"/>
                             <constraint firstAttribute="trailing" secondItem="dBx-4E-435" secondAttribute="trailing" id="s3H-5u-sLC"/>
                             <constraint firstItem="dBx-4E-435" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="xFA-OE-0jU"/>
@@ -36,12 +76,13 @@
                     </view>
                     <navigationItem key="navigationItem" title="Revirant" id="sxu-3l-dLg"/>
                     <connections>
+                        <outlet property="collectionView" destination="zxJ-6U-M3a" id="61P-sC-ZDL"/>
                         <outlet property="searchBar" destination="dBx-4E-435" id="8Si-7e-HAs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1170" y="314"/>
+            <point key="canvasLocation" x="1118" y="-378"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="MB9-wq-4PM">

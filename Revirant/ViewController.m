@@ -9,12 +9,16 @@
 #import "ViewController.h"
 #import "RRUtilities.h"
 #import "YelpAPINetworkClient.h"
+#import "RRBusinessSummaryCollectionViewCell.h"
+
+static const CGFloat kFMImageSelectionCellSpacing = 4.0;
 
 @interface ViewController () <CLLocationManagerDelegate, UISearchBarDelegate>
 @property (strong, nonatomic) CLLocationManager *locationManager;
 @property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
 @property (strong,nonatomic) NSString *queryString;
 @property (strong, nonatomic) CLLocation *currentLocation;
+@property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @end
 
 @implementation ViewController
@@ -23,6 +27,9 @@
     [super viewDidLoad];
     
     self.searchBar.delegate = self;
+    
+    self.collectionView.delegate = self;
+    self.collectionView.dataSource = self;
     
     self.locationManager = [[CLLocationManager alloc] init];
     self.locationManager.delegate = self;
@@ -35,6 +42,32 @@
     self.queryString = self.searchBar.text;
     [self determineUserLocationAndFindBusinesses];
 }
+
+#pragma mark <UICollectionViewDataSource>
+
+- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
+    return 1;
+}
+
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+    return 15;
+}
+
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+    RRBusinessSummaryCollectionViewCell *cell = (RRBusinessSummaryCollectionViewCell *)[collectionView dequeueReusableCellWithReuseIdentifier:@"Cell" forIndexPath:indexPath];
+    
+    return cell;
+}
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+
+}
+
+- (void)collectionView:(UICollectionView *)collectionView didDeselectItemAtIndexPath:(NSIndexPath *)indexPath {
+
+}
+
+
 
 #pragma mark - Location Manager
 
@@ -78,5 +111,35 @@
                             self.currentLocation = nil;
                         } session:[NSURLSession sharedSession]];
 }
+
+#pragma mark Collection view flow layout delegate
+
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
+    NSInteger numColumns = 2;
+    
+    CGFloat interitemSpacing = [self collectionView:collectionView layout:collectionViewLayout minimumInteritemSpacingForSectionAtIndex:indexPath.section];
+    CGFloat totalInteritemSpacing = (numColumns - 1) * interitemSpacing;
+    
+    UIEdgeInsets sectionInset = [self collectionView:collectionView layout:collectionViewLayout insetForSectionAtIndex:indexPath.section];
+    CGFloat totalSectionInsetSpacing = sectionInset.left + sectionInset.right;
+    
+    CGFloat size = (self.collectionView.frame.size.width - totalInteritemSpacing - totalSectionInsetSpacing) / (CGFloat)numColumns;
+    return CGSizeMake(size, size);
+}
+
+- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section {
+    return kFMImageSelectionCellSpacing;
+}
+
+- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section {
+    return kFMImageSelectionCellSpacing;
+}
+
+- (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section {
+    //    return UIEdgeInsetsZero;
+    return UIEdgeInsetsMake(5.0, 5.0, 5.0, 5.0);
+}
+
+
 
 @end
