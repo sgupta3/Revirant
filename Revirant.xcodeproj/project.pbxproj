@@ -13,6 +13,8 @@
 		D818D9441CBA22E500A8F202 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D818D9421CBA22E500A8F202 /* Main.storyboard */; };
 		D818D9461CBA22E500A8F202 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D818D9451CBA22E500A8F202 /* Assets.xcassets */; };
 		D818D9491CBA22E500A8F202 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D818D9471CBA22E500A8F202 /* LaunchScreen.storyboard */; };
+		D818D9531CBA258500A8F202 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D818D9521CBA258500A8F202 /* CoreLocation.framework */; };
+		D818D95D1CBA348700A8F202 /* RRUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = D818D95C1CBA348700A8F202 /* RRUtilities.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,9 @@
 		D818D9451CBA22E500A8F202 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D818D9481CBA22E500A8F202 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D818D94A1CBA22E500A8F202 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D818D9521CBA258500A8F202 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		D818D95B1CBA348700A8F202 /* RRUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RRUtilities.h; sourceTree = "<group>"; };
+		D818D95C1CBA348700A8F202 /* RRUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RRUtilities.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D818D9531CBA258500A8F202 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +48,7 @@
 		D818D92D1CBA22E400A8F202 = {
 			isa = PBXGroup;
 			children = (
+				D818D9521CBA258500A8F202 /* CoreLocation.framework */,
 				D818D9381CBA22E500A8F202 /* Revirant */,
 				D818D9371CBA22E500A8F202 /* Products */,
 			);
@@ -67,6 +74,8 @@
 				D818D9471CBA22E500A8F202 /* LaunchScreen.storyboard */,
 				D818D94A1CBA22E500A8F202 /* Info.plist */,
 				D818D9391CBA22E500A8F202 /* Supporting Files */,
+				D818D95B1CBA348700A8F202 /* RRUtilities.h */,
+				D818D95C1CBA348700A8F202 /* RRUtilities.m */,
 			);
 			path = Revirant;
 			sourceTree = "<group>";
@@ -149,6 +158,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D818D95D1CBA348700A8F202 /* RRUtilities.m in Sources */,
 				D818D9411CBA22E500A8F202 /* ViewController.m in Sources */,
 				D818D93E1CBA22E500A8F202 /* AppDelegate.m in Sources */,
 				D818D93B1CBA22E500A8F202 /* main.m in Sources */,
@@ -300,6 +310,7 @@
 				D818D94F1CBA22E500A8F202 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
