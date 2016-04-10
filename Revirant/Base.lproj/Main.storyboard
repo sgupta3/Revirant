@@ -27,7 +27,7 @@
                                     <string>Title</string>
                                 </scopeButtonTitles>
                             </searchBar>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="zxJ-6U-M3a">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" delaysContentTouches="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="zxJ-6U-M3a">
                                 <rect key="frame" x="0.0" y="108" width="600" height="492"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="4tl-2h-Xg6">
@@ -102,6 +102,7 @@
                                             <outlet property="businessAddress" destination="Lwy-mi-v3k" id="OMc-45-4F9"/>
                                             <outlet property="businessImage" destination="SWk-Np-ehl" id="207-lW-NAO"/>
                                             <outlet property="businessName" destination="h7F-Vx-ipZ" id="2q2-OS-T6E"/>
+                                            <outlet property="overlayView" destination="iCA-mG-vnb" id="xS5-4A-t0o"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>

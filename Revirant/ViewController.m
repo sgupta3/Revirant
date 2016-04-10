@@ -65,6 +65,17 @@ static const CGFloat kRRBusinessSummaryCellSpacing = 4.0;
     return cell;
 }
 
+- (void)collectionView:(UICollectionView *)collectionView didHighlightItemAtIndexPath:(NSIndexPath *)indexPath {
+    RRBusinessSummaryCollectionViewCell *cell = (RRBusinessSummaryCollectionViewCell *)[collectionView cellForItemAtIndexPath:indexPath];
+    cell.overlayView.backgroundColor = [UIColor colorWithWhite:1.0 alpha:0.5];
+}
+
+- (void)collectionView:(UICollectionView *)collectionView didUnhighlightItemAtIndexPath:(nonnull NSIndexPath *)indexPath {
+    RRBusinessSummaryCollectionViewCell *cell = (RRBusinessSummaryCollectionViewCell *)[collectionView cellForItemAtIndexPath:indexPath];
+    cell.overlayView.backgroundColor = [UIColor colorWithWhite:0.0 alpha:0.5];
+
+}
+
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
 
 }
