@@ -13,6 +13,7 @@
 @property(nonatomic, strong) NSURL *imageUrl;
 @property(nonatomic, strong) NSString *name;
 @property(nonatomic, strong) NSString *address;
+@property(nonatomic, strong) NSString *businessID;
 
 -(id) initWithDictionary:(NSDictionary *)dictionary;
 @end

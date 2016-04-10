@@ -14,6 +14,7 @@
     self = [super init];
     if(self){
         #warning Type safe all of these
+        self.businessID = dictionary[@"id"];
         self.imageUrl = [NSURL URLWithString:dictionary[@"image_url"]];
         self.name = dictionary[@"name"];
         self.address = dictionary[@"location"][@"address"][0];
