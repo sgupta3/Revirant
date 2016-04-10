@@ -12,5 +12,6 @@
 @property (weak, nonatomic) IBOutlet UIImageView *businessImage;
 @property (weak, nonatomic) IBOutlet UILabel *businessName;
 @property (weak, nonatomic) IBOutlet UILabel *businessAddress;
+@property (weak, nonatomic) IBOutlet UIView *overlayView;
 - (void) businessImageFromUrl:(NSURL *)imageUrl;
 @end

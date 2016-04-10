@@ -11,6 +11,10 @@
 
 @implementation RRBusinessSummaryCollectionViewCell
 
+- (void) awakeFromNib {
+    self.businessImage.image = [[UIImage imageNamed:@"raining_tomatoes"] stackBlur:5];
+}
+
 - (void) businessImageFromUrl:(NSURL *)imageUrl {
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         NSData *data = [NSData dataWithContentsOfURL:imageUrl];
