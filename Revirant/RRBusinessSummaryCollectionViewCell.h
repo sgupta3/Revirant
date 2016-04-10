@@ -10,5 +10,7 @@
 
 @interface RRBusinessSummaryCollectionViewCell : UICollectionViewCell
 @property (weak, nonatomic) IBOutlet UIImageView *businessImage;
-
+@property (weak, nonatomic) IBOutlet UILabel *businessName;
+@property (weak, nonatomic) IBOutlet UILabel *businessAddress;
+- (void) businessImageFromUrl:(NSURL *)imageUrl;
 @end
