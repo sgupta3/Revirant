@@ -4,6 +4,5 @@
 # use_frameworks!
 
 target 'Revirant' do
-
+  pod 'TDOAuth', '~> 1.1'
 end
-
