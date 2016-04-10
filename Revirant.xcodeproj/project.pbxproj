@@ -87,6 +87,8 @@
 		D818D9381CBA22E500A8F202 /* Revirant */ = {
 			isa = PBXGroup;
 			children = (
+				D89501E51CBA5EDF0001FEB5 /* Networking */,
+				D89501E61CBA5F020001FEB5 /* Classes */,
 				D818D93C1CBA22E500A8F202 /* AppDelegate.h */,
 				D818D93D1CBA22E500A8F202 /* AppDelegate.m */,
 				D818D93F1CBA22E500A8F202 /* ViewController.h */,
@@ -96,12 +98,6 @@
 				D818D9471CBA22E500A8F202 /* LaunchScreen.storyboard */,
 				D818D94A1CBA22E500A8F202 /* Info.plist */,
 				D818D9391CBA22E500A8F202 /* Supporting Files */,
-				D818D95B1CBA348700A8F202 /* RRUtilities.h */,
-				D818D95C1CBA348700A8F202 /* RRUtilities.m */,
-				D89501DE1CBA3D7F0001FEB5 /* NSURLRequest+OAuth.h */,
-				D89501DF1CBA3D7F0001FEB5 /* NSURLRequest+OAuth.m */,
-				D89501E11CBA42C80001FEB5 /* YelpAPINetworkClient.h */,
-				D89501E21CBA42C80001FEB5 /* YelpAPINetworkClient.m */,
 			);
 			path = Revirant;
 			sourceTree = "<group>";
@@ -112,6 +108,26 @@
 				D818D93A1CBA22E500A8F202 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D89501E51CBA5EDF0001FEB5 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				D89501DE1CBA3D7F0001FEB5 /* NSURLRequest+OAuth.h */,
+				D89501DF1CBA3D7F0001FEB5 /* NSURLRequest+OAuth.m */,
+				D89501E11CBA42C80001FEB5 /* YelpAPINetworkClient.h */,
+				D89501E21CBA42C80001FEB5 /* YelpAPINetworkClient.m */,
+			);
+			name = Networking;
+			sourceTree = "<group>";
+		};
+		D89501E61CBA5F020001FEB5 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				D818D95B1CBA348700A8F202 /* RRUtilities.h */,
+				D818D95C1CBA348700A8F202 /* RRUtilities.m */,
+			);
+			name = Classes;
 			sourceTree = "<group>";
 		};
 		E9E87BF4E154D9A2E6FF5C5A /* Frameworks */ = {
