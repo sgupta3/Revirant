@@ -16,6 +16,7 @@ static NSString * const kAPIHost           = @"api.yelp.com";
 static NSString * const kSearchPath        = @"/v2/search/";
 static NSString * const kBusinessPath      = @"/v2/business/";
 static NSString * const kSearchLimit       = @"10";
+static NSString * const kMockCoordinates   = @"43.653226,-79.383184";
 
 @implementation YelpAPINetworkClient
 
@@ -80,9 +81,12 @@ static NSString * const kSearchLimit       = @"10";
  @return The NSURLRequest needed to perform the search
  */
 - (NSURLRequest *)_searchRequestWithTerm:(NSString *)term location:(CLLocation *)location {
+    
+    NSString *coordinates = location == nil ? kMockCoordinates : [NSString stringWithFormat:@"%f,%f", location.coordinate.latitude, location.coordinate.longitude];
+    
     NSDictionary *params = @{
                              @"term": term,
-                             @"ll": [NSString stringWithFormat:@"%f,%f", location.coordinate.latitude, location.coordinate.longitude],
+                             @"ll": coordinates,
                              @"limit": kSearchLimit
                              };
     
