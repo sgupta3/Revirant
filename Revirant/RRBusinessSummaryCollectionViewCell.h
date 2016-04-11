@@ -9,8 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface RRBusinessSummaryCollectionViewCell : UICollectionViewCell
-@property (weak, nonatomic) IBOutlet UIImageView *businessImage;
-@property (weak, nonatomic) IBOutlet UILabel *businessName;
-@property (weak, nonatomic) IBOutlet UILabel *businessAddress;
-@property (weak, nonatomic) IBOutlet UIView *overlayView;
+@property (nonatomic, weak) IBOutlet UIImageView *businessImage;
+@property (nonatomic, weak) IBOutlet UILabel *businessName;
+@property (nonatomic, weak) IBOutlet UILabel *businessAddress;
+@property (nonatomic, weak) IBOutlet UIView *overlayView;
 @end
