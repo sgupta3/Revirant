@@ -7,6 +7,7 @@
 //
 
 #import "RRBusinessSummary.h"
+#import "UIImage+StackBlur.h"
 
 @implementation RRBusinessSummary
 
@@ -20,6 +21,21 @@
         self.address = dictionary[@"location"][@"address"][0];
     }
     return self;
+}
+
+-(void) businessPhotoWithCompletion:(void (^)(UIImage *image))completion {
+    
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        UIImage *image = [UIImage imageNamed:@"raining_tomatoes"];
+        
+        if(self.imageUrl){
+            NSData *data = [NSData dataWithContentsOfURL:self.imageUrl];
+            image = [UIImage imageWithData:data];
+        }
+        dispatch_sync(dispatch_get_main_queue(), ^{
+            completion([image stackBlur:5]);
+        });
+    });
 }
 
 @end

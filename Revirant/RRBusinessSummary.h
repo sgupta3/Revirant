@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @interface RRBusinessSummary : NSObject
 
@@ -16,4 +17,5 @@
 @property(nonatomic, strong) NSString *businessID;
 
 -(id) initWithDictionary:(NSDictionary *)dictionary;
+-(void) businessPhotoWithCompletion:(void (^)(UIImage *image))completion;
 @end
