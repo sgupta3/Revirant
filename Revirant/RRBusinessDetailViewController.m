@@ -9,6 +9,7 @@
 #import "RRBusinessDetailViewController.h"
 #import "UIImage+StackBlur.h"
 #import "YelpAPINetworkClient.h"
+#import "RRUtilities.h"
 
 @implementation RRBusinessDetailViewController
 
@@ -16,7 +17,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setupView];
-    [self fetchBusinessInfoWithBusinessID:self.businessSummary.businessID];
 }
 
 -(void) setupView {
@@ -25,17 +25,31 @@
     [self.businessSummary businessPhotoWithCompletion:^(UIImage *image) {
         self.businessImageView.image = image;
     }];
+    
+    [self fetchBusinessInfoWithBusinessID:self.businessSummary.businessID
+                               completion:^(NSDictionary *businessDetails) {
+                                   self.businessReviewTextView.text = businessDetails[@"reviews"][0][@"excerpt"] ? businessDetails[@"reviews"][0][@"excerpt"] : @"Not available";
+                               }];
 }
 
--(void) fetchBusinessInfoWithBusinessID:(NSString *)businessID {
+#pragma mark - Data Fethcher
+
+-(void) fetchBusinessInfoWithBusinessID:(NSString *)businessID completion:(void (^)(NSDictionary *businessDetails))completion {
     YelpAPINetworkClient *client = [[YelpAPINetworkClient alloc] init];
     [client queryBusinessesWithbusinessID:businessID withSuccess:^(NSDictionary *businessesInfo) {
-        self.businessReviewTextView.text = businessesInfo[@"reviews"][0][@"excerpt"] ? businessesInfo[@"reviews"][0][@"excerpt"] : @"Not available";
+        completion(businessesInfo);
     } error:^(NSError *error) {
-        
-    } always:^{
-        
-    } session:[NSURLSession sharedSession]];
+        NSLog(@"Error caused while fetching business details. Error: %@, %@",error.userInfo, error.description);
+        [self showErrorAlert];
+    } always:nil
+    session:[NSURLSession sharedSession]];
+}
+
+#pragma mark - Helpers
+
+-(void)showErrorAlert {
+    UIAlertController *alert= [RRUtilities alertWithTitle:@"Unable to fetch the details" message:@"Reverant is unable to fetch details for this business. Please try again." okayHandler:nil];
+    [self presentViewController:alert animated:YES completion:nil];
 }
 
 @end
