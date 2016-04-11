@@ -270,23 +270,6 @@
             </objects>
             <point key="canvasLocation" x="380" y="-378"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="x9n-QG-SAR">
-            <objects>
-                <viewController id="xsR-fK-bia" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="5xr-Uf-7mf"/>
-                        <viewControllerLayoutGuide type="bottom" id="GPW-0a-KAw"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="jen-wD-jUI">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="h1z-1w-u0X" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-        </scene>
     </scenes>
     <resources>
         <image name="location" width="48" height="48"/>
