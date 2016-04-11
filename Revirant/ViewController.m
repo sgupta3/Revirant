@@ -12,10 +12,11 @@
 #import "RRBusinessSummaryCollectionViewCell.h"
 #import "RRBusinessSummary.h"
 #import "RRBusinessDetailViewController.h"
+#import "UIScrollView+EmptyDataSet.h"
 
 static const CGFloat kRRBusinessSummaryCellSpacing = 4.0;
 
-@interface ViewController () <CLLocationManagerDelegate, UISearchBarDelegate>
+@interface ViewController () <CLLocationManagerDelegate, UISearchBarDelegate, DZNEmptyDataSetSource, DZNEmptyDataSetDelegate>
 @property (nonatomic, strong) CLLocationManager *locationManager;
 @property (nonatomic, weak) IBOutlet UISearchBar *searchBar;
 @property (nonatomic, strong) NSString *queryString;
@@ -38,6 +39,9 @@ static const CGFloat kRRBusinessSummaryCellSpacing = 4.0;
     self.locationManager = [[CLLocationManager alloc] init];
     self.locationManager.delegate = self;
     self.locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+    
+    self.collectionView.emptyDataSetSource = self;
+    self.collectionView.emptyDataSetDelegate = self;
     
 }
 
@@ -150,6 +154,38 @@ static const CGFloat kRRBusinessSummaryCellSpacing = 4.0;
         RRBusinessDetailViewController *destinationTableViewController = (RRBusinessDetailViewController *)segue.destinationViewController;
         destinationTableViewController.businessSummary = self.businessSelected;
     }
+}
+
+#pragma mark - DZEmptySet Delegates
+
+- (UIImage *)imageForEmptyDataSet:(UIScrollView *)scrollView
+{
+    return [UIImage imageNamed:@"satisfied_smiley"];
+}
+
+- (NSAttributedString *)titleForEmptyDataSet:(UIScrollView *)scrollView
+{
+    NSString *text = @"No results to show";
+    
+    NSDictionary *attributes = @{NSFontAttributeName: [UIFont fontWithName:@"Futura" size:14.0],
+                                 NSForegroundColorAttributeName: [UIColor darkGrayColor]};
+    
+    return [[NSAttributedString alloc] initWithString:text attributes:attributes];
+}
+
+- (NSAttributedString *)descriptionForEmptyDataSet:(UIScrollView *)scrollView
+{
+    NSString *text = @"You can try keywords like salad, lunch, burrito and ofcourse beer!";
+    
+    NSMutableParagraphStyle *paragraph = [NSMutableParagraphStyle new];
+    paragraph.lineBreakMode = NSLineBreakByWordWrapping;
+    paragraph.alignment = NSTextAlignmentCenter;
+    
+    NSDictionary *attributes = @{NSFontAttributeName: [UIFont fontWithName:@"Futura" size:14.0],
+                                 NSForegroundColorAttributeName: [UIColor lightGrayColor],
+                                 NSParagraphStyleAttributeName: paragraph};
+    
+    return [[NSAttributedString alloc] initWithString:text attributes:attributes];
 }
 
 #pragma mark - Collection view flow layout delegate
