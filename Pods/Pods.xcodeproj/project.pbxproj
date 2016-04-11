@@ -1,0 +1,732 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		03D652F245EC57406662001A771FC85F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3B7BDF5CE5CB8F095FE12DA55D9A9BB /* UIKit.framework */; };
+		1CA5E5B427016F8F21C95D7088C3FA48 /* OMGHTTPURLRQ-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 77806B5C94A17FC95B694B20F4C34615 /* OMGHTTPURLRQ-dummy.m */; };
+		31D310EAFEAE2031A6FD01DA61A1F22A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E7E5AF37923BFA48D6994B9BFC6535F /* Foundation.framework */; };
+		48FD54B161094645748D2BACA8DE4A5B /* OMGUserAgent.m in Sources */ = {isa = PBXBuildFile; fileRef = 692D9D2D56A29E8CCF51D5BF69C2D288 /* OMGUserAgent.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		6BA059678A8732487F69EB681733149F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E7E5AF37923BFA48D6994B9BFC6535F /* Foundation.framework */; };
+		6FB2315FDA2C045D0928FE90D7ABA2F8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E7E5AF37923BFA48D6994B9BFC6535F /* Foundation.framework */; };
+		7F941B43E1B7FCF40736767DCE194D90 /* UIScrollView+EmptyDataSet.h in Headers */ = {isa = PBXBuildFile; fileRef = 06711E3CE56D26D546D224B9D78378CA /* UIScrollView+EmptyDataSet.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B278F6381E10F239B4363208B84472FA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E7E5AF37923BFA48D6994B9BFC6535F /* Foundation.framework */; };
+		C1B4DB5D687E0F7327EFA260577544ED /* TDOAuth-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE460F7CDC470BE1D2623700A835C94 /* TDOAuth-dummy.m */; };
+		D2914FEBF2C3D2F2E3F442C5506689E9 /* DZNEmptyDataSet-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A0DC0D500CA1FDA1F7C4407682DFF1BD /* DZNEmptyDataSet-dummy.m */; };
+		D3350498FC09B5ED5C3DC1E63024CAC5 /* TDOAuth.m in Sources */ = {isa = PBXBuildFile; fileRef = AF4BD6222ACFBFA8F6014A50CD54CE54 /* TDOAuth.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		EF75BC735D336A3DF6DEB90F29DF5FAE /* UIScrollView+EmptyDataSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EB2B37FA6681BE1B315D69235E17093 /* UIScrollView+EmptyDataSet.m */; };
+		F29C6CB87595941B74EE3F238D78B367 /* OMGUserAgent.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D7229EF7B14E3FC0B2465A987B754B1 /* OMGUserAgent.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FA02642AE76E4DD425010A886F31ED8B /* TDOAuth.h in Headers */ = {isa = PBXBuildFile; fileRef = 81080DD1472656FAFB9614170981D257 /* TDOAuth.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FBFF64BA4DE8A26BB780D7E43DD2B48B /* Pods-Revirant-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CFF2635DA0EF69BE738E95BEAD9A201 /* Pods-Revirant-dummy.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		23C189F28C3508891E2166777B5FAE39 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FCD660E6CD2216BA204430C04B61EFFF;
+			remoteInfo = OMGHTTPURLRQ;
+		};
+		337761BF4D10202C085E368BD6CBB94A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FCD660E6CD2216BA204430C04B61EFFF;
+			remoteInfo = OMGHTTPURLRQ;
+		};
+		37F82F40A2D45A8D36ED4030F05C53A8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 736E57AD5AEFAAF68D47AE4E8FCB8F68;
+			remoteInfo = DZNEmptyDataSet;
+		};
+		424D9489770586B7C3E1EE0F6AAAC730 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E49E76A92F4551A26DAB3C67003BAACE;
+			remoteInfo = TDOAuth;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		06711E3CE56D26D546D224B9D78378CA /* UIScrollView+EmptyDataSet.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIScrollView+EmptyDataSet.h"; path = "Source/UIScrollView+EmptyDataSet.h"; sourceTree = "<group>"; };
+		0CFF2635DA0EF69BE738E95BEAD9A201 /* Pods-Revirant-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Revirant-dummy.m"; sourceTree = "<group>"; };
+		303CAE6192CBEDBC96562246907F9F63 /* Pods-Revirant.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Revirant.release.xcconfig"; sourceTree = "<group>"; };
+		33DCC33BA02EF56ECB99DEEE24C3393A /* libOMGHTTPURLRQ.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libOMGHTTPURLRQ.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		373091172CA4208B93325C64D08816F5 /* OMGHTTPURLRQ.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = OMGHTTPURLRQ.xcconfig; sourceTree = "<group>"; };
+		3A052998B7D315DBBADDA80BF719F8DC /* Pods-Revirant.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Revirant.debug.xcconfig"; sourceTree = "<group>"; };
+		3D7229EF7B14E3FC0B2465A987B754B1 /* OMGUserAgent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OMGUserAgent.h; path = Sources/OMGUserAgent.h; sourceTree = "<group>"; };
+		52C1576F4B55D5E6B0D6FC5A223D9222 /* DZNEmptyDataSet-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DZNEmptyDataSet-prefix.pch"; sourceTree = "<group>"; };
+		5A57521EF3707BF40E6CBD674EAE891F /* Pods-Revirant-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Revirant-acknowledgements.markdown"; sourceTree = "<group>"; };
+		692D9D2D56A29E8CCF51D5BF69C2D288 /* OMGUserAgent.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OMGUserAgent.m; path = Sources/OMGUserAgent.m; sourceTree = "<group>"; };
+		6E7E5AF37923BFA48D6994B9BFC6535F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		70343B73F41F3E82A46364D78285D142 /* libDZNEmptyDataSet.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libDZNEmptyDataSet.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		77806B5C94A17FC95B694B20F4C34615 /* OMGHTTPURLRQ-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "OMGHTTPURLRQ-dummy.m"; sourceTree = "<group>"; };
+		7BA462B01CE24B0B7C43D3A8717292AA /* DZNEmptyDataSet.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DZNEmptyDataSet.xcconfig; sourceTree = "<group>"; };
+		801B9AFDE201BEB099F1E963DFF753D2 /* libTDOAuth.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libTDOAuth.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		81080DD1472656FAFB9614170981D257 /* TDOAuth.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TDOAuth.h; sourceTree = "<group>"; };
+		87C0AB18C4F8C647461F9625F2049F0F /* TDOAuth-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TDOAuth-prefix.pch"; sourceTree = "<group>"; };
+		8EB2B37FA6681BE1B315D69235E17093 /* UIScrollView+EmptyDataSet.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIScrollView+EmptyDataSet.m"; path = "Source/UIScrollView+EmptyDataSet.m"; sourceTree = "<group>"; };
+		A0DC0D500CA1FDA1F7C4407682DFF1BD /* DZNEmptyDataSet-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DZNEmptyDataSet-dummy.m"; sourceTree = "<group>"; };
+		A28506F8FFEF81AC09BCDBAECAE12962 /* TDOAuth.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TDOAuth.xcconfig; sourceTree = "<group>"; };
+		ADCE78A9CC9902149B343F9C2753E146 /* Pods-Revirant-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Revirant-frameworks.sh"; sourceTree = "<group>"; };
+		AF4BD6222ACFBFA8F6014A50CD54CE54 /* TDOAuth.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TDOAuth.m; sourceTree = "<group>"; };
+		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		BB1E21B151C620F040F37A6506EB09D4 /* libPods-Revirant.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Revirant.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE74390061246F9BA12D66A6502F0CDF /* OMGHTTPURLRQ-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "OMGHTTPURLRQ-prefix.pch"; sourceTree = "<group>"; };
+		BEDEF3F6D628CD4239D0F53FBE7FB81C /* Pods-Revirant-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Revirant-acknowledgements.plist"; sourceTree = "<group>"; };
+		BEE47D9E71ACA7E4826FB0DDB35CE730 /* Pods-Revirant-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Revirant-resources.sh"; sourceTree = "<group>"; };
+		C3B7BDF5CE5CB8F095FE12DA55D9A9BB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		DEE460F7CDC470BE1D2623700A835C94 /* TDOAuth-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TDOAuth-dummy.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		06DF07A7F70611A3E1FD76D182EE36DE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6BA059678A8732487F69EB681733149F /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		360EEE3FA0C21A0399944F45FF502501 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				31D310EAFEAE2031A6FD01DA61A1F22A /* Foundation.framework in Frameworks */,
+				03D652F245EC57406662001A771FC85F /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D64F37947541A878E3792BB2DF38CDAB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6FB2315FDA2C045D0928FE90D7ABA2F8 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D88DA780A33E98530E4EBD8CF52FDA32 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B278F6381E10F239B4363208B84472FA /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0E387CBC335DCB98558F823EA67EEEA4 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				373091172CA4208B93325C64D08816F5 /* OMGHTTPURLRQ.xcconfig */,
+				77806B5C94A17FC95B694B20F4C34615 /* OMGHTTPURLRQ-dummy.m */,
+				BE74390061246F9BA12D66A6502F0CDF /* OMGHTTPURLRQ-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/OMGHTTPURLRQ";
+			sourceTree = "<group>";
+		};
+		18340F12838DEE43507667CC74401EB1 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				6E7E5AF37923BFA48D6994B9BFC6535F /* Foundation.framework */,
+				C3B7BDF5CE5CB8F095FE12DA55D9A9BB /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				18340F12838DEE43507667CC74401EB1 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		43938D9F9E49EC6B8FB39C5051329626 /* Pods-Revirant */ = {
+			isa = PBXGroup;
+			children = (
+				5A57521EF3707BF40E6CBD674EAE891F /* Pods-Revirant-acknowledgements.markdown */,
+				BEDEF3F6D628CD4239D0F53FBE7FB81C /* Pods-Revirant-acknowledgements.plist */,
+				0CFF2635DA0EF69BE738E95BEAD9A201 /* Pods-Revirant-dummy.m */,
+				ADCE78A9CC9902149B343F9C2753E146 /* Pods-Revirant-frameworks.sh */,
+				BEE47D9E71ACA7E4826FB0DDB35CE730 /* Pods-Revirant-resources.sh */,
+				3A052998B7D315DBBADDA80BF719F8DC /* Pods-Revirant.debug.xcconfig */,
+				303CAE6192CBEDBC96562246907F9F63 /* Pods-Revirant.release.xcconfig */,
+			);
+			name = "Pods-Revirant";
+			path = "Target Support Files/Pods-Revirant";
+			sourceTree = "<group>";
+		};
+		6B56F1EF79AE331351B13DE3EFA87BE5 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				7BA462B01CE24B0B7C43D3A8717292AA /* DZNEmptyDataSet.xcconfig */,
+				A0DC0D500CA1FDA1F7C4407682DFF1BD /* DZNEmptyDataSet-dummy.m */,
+				52C1576F4B55D5E6B0D6FC5A223D9222 /* DZNEmptyDataSet-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/DZNEmptyDataSet";
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
+				433CD3331B6C3787F473C941B61FC68F /* Frameworks */,
+				9E432227E4040F8ED5545635D359DB78 /* Pods */,
+				83870C66BB50A968EB690C0B092F7C66 /* Products */,
+				B86395F6C6EBEC07C46DF3A97EFA4F9E /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		83870C66BB50A968EB690C0B092F7C66 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				70343B73F41F3E82A46364D78285D142 /* libDZNEmptyDataSet.a */,
+				33DCC33BA02EF56ECB99DEEE24C3393A /* libOMGHTTPURLRQ.a */,
+				BB1E21B151C620F040F37A6506EB09D4 /* libPods-Revirant.a */,
+				801B9AFDE201BEB099F1E963DFF753D2 /* libTDOAuth.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9E432227E4040F8ED5545635D359DB78 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F3ACB8B294D91DCB192456FBB35D33DE /* DZNEmptyDataSet */,
+				BEC469FBD0F2DAB84353D3926FEACCEC /* OMGHTTPURLRQ */,
+				F19A0AA3B873A8D9038E6E85BFF306B7 /* TDOAuth */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		B86395F6C6EBEC07C46DF3A97EFA4F9E /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				43938D9F9E49EC6B8FB39C5051329626 /* Pods-Revirant */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		BEC469FBD0F2DAB84353D3926FEACCEC /* OMGHTTPURLRQ */ = {
+			isa = PBXGroup;
+			children = (
+				0E387CBC335DCB98558F823EA67EEEA4 /* Support Files */,
+				D277E249AE9A38B8AC15A2F4CB41A5D3 /* UserAgent */,
+			);
+			path = OMGHTTPURLRQ;
+			sourceTree = "<group>";
+		};
+		C3028318AF061D1295248BBDF8CBE707 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				A28506F8FFEF81AC09BCDBAECAE12962 /* TDOAuth.xcconfig */,
+				DEE460F7CDC470BE1D2623700A835C94 /* TDOAuth-dummy.m */,
+				87C0AB18C4F8C647461F9625F2049F0F /* TDOAuth-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/TDOAuth";
+			sourceTree = "<group>";
+		};
+		D277E249AE9A38B8AC15A2F4CB41A5D3 /* UserAgent */ = {
+			isa = PBXGroup;
+			children = (
+				3D7229EF7B14E3FC0B2465A987B754B1 /* OMGUserAgent.h */,
+				692D9D2D56A29E8CCF51D5BF69C2D288 /* OMGUserAgent.m */,
+			);
+			name = UserAgent;
+			sourceTree = "<group>";
+		};
+		F19A0AA3B873A8D9038E6E85BFF306B7 /* TDOAuth */ = {
+			isa = PBXGroup;
+			children = (
+				81080DD1472656FAFB9614170981D257 /* TDOAuth.h */,
+				AF4BD6222ACFBFA8F6014A50CD54CE54 /* TDOAuth.m */,
+				C3028318AF061D1295248BBDF8CBE707 /* Support Files */,
+			);
+			path = TDOAuth;
+			sourceTree = "<group>";
+		};
+		F3ACB8B294D91DCB192456FBB35D33DE /* DZNEmptyDataSet */ = {
+			isa = PBXGroup;
+			children = (
+				06711E3CE56D26D546D224B9D78378CA /* UIScrollView+EmptyDataSet.h */,
+				8EB2B37FA6681BE1B315D69235E17093 /* UIScrollView+EmptyDataSet.m */,
+				6B56F1EF79AE331351B13DE3EFA87BE5 /* Support Files */,
+			);
+			path = DZNEmptyDataSet;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		48B2BA5F3935DE22852A7EFF05B89EE6 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7F941B43E1B7FCF40736767DCE194D90 /* UIScrollView+EmptyDataSet.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		96EA7B0F072C3798ADC6712AD9C8E79D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA02642AE76E4DD425010A886F31ED8B /* TDOAuth.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C46B1B2248038D58B7A9923C26B11B29 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F29C6CB87595941B74EE3F238D78B367 /* OMGUserAgent.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		726A080EA02549ABD2FE7D425939D9D2 /* Pods-Revirant */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4B56F225DAFC082881FF4CEBF587DF7D /* Build configuration list for PBXNativeTarget "Pods-Revirant" */;
+			buildPhases = (
+				9C14B23988E33353CE9DE7C0A1F92D0C /* Sources */,
+				D88DA780A33E98530E4EBD8CF52FDA32 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FB5D41B9E6E4467C52F7E0492DA67D90 /* PBXTargetDependency */,
+				411CCDDEEDE0C14E83BB0D8B3A14B384 /* PBXTargetDependency */,
+				08D4AE6521E96E1FC559DE142A9F5745 /* PBXTargetDependency */,
+			);
+			name = "Pods-Revirant";
+			productName = "Pods-Revirant";
+			productReference = BB1E21B151C620F040F37A6506EB09D4 /* libPods-Revirant.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		736E57AD5AEFAAF68D47AE4E8FCB8F68 /* DZNEmptyDataSet */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C1C847BA639995C48B89DF3C96C3A6FB /* Build configuration list for PBXNativeTarget "DZNEmptyDataSet" */;
+			buildPhases = (
+				B6C2166CDEB842A61247B874390A5673 /* Sources */,
+				360EEE3FA0C21A0399944F45FF502501 /* Frameworks */,
+				48B2BA5F3935DE22852A7EFF05B89EE6 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DZNEmptyDataSet;
+			productName = DZNEmptyDataSet;
+			productReference = 70343B73F41F3E82A46364D78285D142 /* libDZNEmptyDataSet.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		E49E76A92F4551A26DAB3C67003BAACE /* TDOAuth */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4CC2729CC5828B51093F0232E93100C8 /* Build configuration list for PBXNativeTarget "TDOAuth" */;
+			buildPhases = (
+				14AD68C81712052E321E53851217E00E /* Sources */,
+				D64F37947541A878E3792BB2DF38CDAB /* Frameworks */,
+				96EA7B0F072C3798ADC6712AD9C8E79D /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4588E63FE5C8AD861D28F1B2FA9E4E9A /* PBXTargetDependency */,
+			);
+			name = TDOAuth;
+			productName = TDOAuth;
+			productReference = 801B9AFDE201BEB099F1E963DFF753D2 /* libTDOAuth.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		FCD660E6CD2216BA204430C04B61EFFF /* OMGHTTPURLRQ */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BCDAA84180B46191D5FDD1F3233A04FE /* Build configuration list for PBXNativeTarget "OMGHTTPURLRQ" */;
+			buildPhases = (
+				5AE69805046AB1822BAFEC93CBB54CA1 /* Sources */,
+				06DF07A7F70611A3E1FD76D182EE36DE /* Frameworks */,
+				C46B1B2248038D58B7A9923C26B11B29 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OMGHTTPURLRQ;
+			productName = OMGHTTPURLRQ;
+			productReference = 33DCC33BA02EF56ECB99DEEE24C3393A /* libOMGHTTPURLRQ.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 83870C66BB50A968EB690C0B092F7C66 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				736E57AD5AEFAAF68D47AE4E8FCB8F68 /* DZNEmptyDataSet */,
+				FCD660E6CD2216BA204430C04B61EFFF /* OMGHTTPURLRQ */,
+				726A080EA02549ABD2FE7D425939D9D2 /* Pods-Revirant */,
+				E49E76A92F4551A26DAB3C67003BAACE /* TDOAuth */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		14AD68C81712052E321E53851217E00E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C1B4DB5D687E0F7327EFA260577544ED /* TDOAuth-dummy.m in Sources */,
+				D3350498FC09B5ED5C3DC1E63024CAC5 /* TDOAuth.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5AE69805046AB1822BAFEC93CBB54CA1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1CA5E5B427016F8F21C95D7088C3FA48 /* OMGHTTPURLRQ-dummy.m in Sources */,
+				48FD54B161094645748D2BACA8DE4A5B /* OMGUserAgent.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9C14B23988E33353CE9DE7C0A1F92D0C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FBFF64BA4DE8A26BB780D7E43DD2B48B /* Pods-Revirant-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B6C2166CDEB842A61247B874390A5673 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D2914FEBF2C3D2F2E3F442C5506689E9 /* DZNEmptyDataSet-dummy.m in Sources */,
+				EF75BC735D336A3DF6DEB90F29DF5FAE /* UIScrollView+EmptyDataSet.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		08D4AE6521E96E1FC559DE142A9F5745 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = TDOAuth;
+			target = E49E76A92F4551A26DAB3C67003BAACE /* TDOAuth */;
+			targetProxy = 424D9489770586B7C3E1EE0F6AAAC730 /* PBXContainerItemProxy */;
+		};
+		411CCDDEEDE0C14E83BB0D8B3A14B384 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = OMGHTTPURLRQ;
+			target = FCD660E6CD2216BA204430C04B61EFFF /* OMGHTTPURLRQ */;
+			targetProxy = 337761BF4D10202C085E368BD6CBB94A /* PBXContainerItemProxy */;
+		};
+		4588E63FE5C8AD861D28F1B2FA9E4E9A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = OMGHTTPURLRQ;
+			target = FCD660E6CD2216BA204430C04B61EFFF /* OMGHTTPURLRQ */;
+			targetProxy = 23C189F28C3508891E2166777B5FAE39 /* PBXContainerItemProxy */;
+		};
+		FB5D41B9E6E4467C52F7E0492DA67D90 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = DZNEmptyDataSet;
+			target = 736E57AD5AEFAAF68D47AE4E8FCB8F68 /* DZNEmptyDataSet */;
+			targetProxy = 37F82F40A2D45A8D36ED4030F05C53A8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		3A8B2148ACF349C61494BC6EFA92F407 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 373091172CA4208B93325C64D08816F5 /* OMGHTTPURLRQ.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/OMGHTTPURLRQ/OMGHTTPURLRQ-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		7102995FCB3B60EE4A8F2272343F060D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 303CAE6192CBEDBC96562246907F9F63 /* Pods-Revirant.release.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		7D088A731FF8EA19280E9856EB64B98E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3A052998B7D315DBBADDA80BF719F8DC /* Pods-Revirant.debug.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		8731B32571996258F12A91EF968FADF9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7BA462B01CE24B0B7C43D3A8717292AA /* DZNEmptyDataSet.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/DZNEmptyDataSet/DZNEmptyDataSet-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		9093594FBC2E180173F5ABF694B42EDC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A28506F8FFEF81AC09BCDBAECAE12962 /* TDOAuth.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/TDOAuth/TDOAuth-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		BF0816DEE7B7DECDD2D2A9C68F48AD16 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 373091172CA4208B93325C64D08816F5 /* OMGHTTPURLRQ.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/OMGHTTPURLRQ/OMGHTTPURLRQ-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		C074F63C9EE7CB4D8C618390A32CEC35 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		D006CAD91BC3A97552EF20E5AF482F05 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A28506F8FFEF81AC09BCDBAECAE12962 /* TDOAuth.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/TDOAuth/TDOAuth-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		E43846B588E1892F3093F3B7082B6DFB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EE78915748EA247533243BE8B5E791EB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7BA462B01CE24B0B7C43D3A8717292AA /* DZNEmptyDataSet.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/DZNEmptyDataSet/DZNEmptyDataSet-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C074F63C9EE7CB4D8C618390A32CEC35 /* Debug */,
+				E43846B588E1892F3093F3B7082B6DFB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4B56F225DAFC082881FF4CEBF587DF7D /* Build configuration list for PBXNativeTarget "Pods-Revirant" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7D088A731FF8EA19280E9856EB64B98E /* Debug */,
+				7102995FCB3B60EE4A8F2272343F060D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4CC2729CC5828B51093F0232E93100C8 /* Build configuration list for PBXNativeTarget "TDOAuth" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9093594FBC2E180173F5ABF694B42EDC /* Debug */,
+				D006CAD91BC3A97552EF20E5AF482F05 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BCDAA84180B46191D5FDD1F3233A04FE /* Build configuration list for PBXNativeTarget "OMGHTTPURLRQ" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3A8B2148ACF349C61494BC6EFA92F407 /* Debug */,
+				BF0816DEE7B7DECDD2D2A9C68F48AD16 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C1C847BA639995C48B89DF3C96C3A6FB /* Build configuration list for PBXNativeTarget "DZNEmptyDataSet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8731B32571996258F12A91EF968FADF9 /* Debug */,
+				EE78915748EA247533243BE8B5E791EB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

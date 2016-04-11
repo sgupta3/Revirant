@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>DZNEmptyDataSet.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>OMGHTTPURLRQ.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-Revirant.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>TDOAuth.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>726A080EA02549ABD2FE7D425939D9D2</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>736E57AD5AEFAAF68D47AE4E8FCB8F68</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E49E76A92F4551A26DAB3C67003BAACE</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FCD660E6CD2216BA204430C04B61EFFF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>
