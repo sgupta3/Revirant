@@ -11,6 +11,7 @@
 #import "YelpAPINetworkClient.h"
 #import "RRBusinessSummaryCollectionViewCell.h"
 #import "RRBusinessSummary.h"
+#import "RRBusinessDetailViewController.h"
 
 static const CGFloat kRRBusinessSummaryCellSpacing = 4.0;
 
@@ -21,6 +22,7 @@ static const CGFloat kRRBusinessSummaryCellSpacing = 4.0;
 @property (strong, nonatomic) CLLocation *currentLocation;
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @property (nonatomic, strong) NSMutableArray *businessSummaries;
+@property (nonatomic, strong) RRBusinessSummary *businessSelected;
 @end
 
 @implementation ViewController
@@ -59,9 +61,12 @@ static const CGFloat kRRBusinessSummaryCellSpacing = 4.0;
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     RRBusinessSummaryCollectionViewCell *cell = (RRBusinessSummaryCollectionViewCell *)[collectionView dequeueReusableCellWithReuseIdentifier:@"Cell" forIndexPath:indexPath];
     RRBusinessSummary *currentSummary = [self.businessSummaries objectAtIndex:indexPath.row];
-    [cell businessImageFromUrl:[currentSummary imageUrl]];
+    //[cell businessImageFromUrl:[currentSummary imageUrl]];
     cell.businessName.text = [currentSummary name];
     cell.businessAddress.text = [currentSummary address];
+    [currentSummary businessPhotoWithCompletion:^(UIImage *image) {
+        cell.businessImage.image = image;
+    }];
     return cell;
 }
 
@@ -77,14 +82,10 @@ static const CGFloat kRRBusinessSummaryCellSpacing = 4.0;
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-
+    self.businessSelected = [self.businessSummaries objectAtIndex:indexPath.row];
+    [self performSegueWithIdentifier:@"showBusinessDetailSegue" sender:self];
+    
 }
-
-- (void)collectionView:(UICollectionView *)collectionView didDeselectItemAtIndexPath:(NSIndexPath *)indexPath {
-
-}
-
-
 
 #pragma mark - Location Manager
 
@@ -142,6 +143,13 @@ static const CGFloat kRRBusinessSummaryCellSpacing = 4.0;
         [self.businessSummaries addObject:summary];
     }];
     [self.collectionView reloadData];
+}
+
+- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if([segue.identifier isEqualToString:@"showBusinessDetailSegue"]) {
+        RRBusinessDetailViewController *destinationTableViewController = (RRBusinessDetailViewController *)segue.destinationViewController;
+        destinationTableViewController.businessSummary = self.businessSelected;
+    }
 }
 
 #pragma mark - Collection view flow layout delegate

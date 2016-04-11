@@ -20,6 +20,7 @@
 		D89501ED1CBAB7860001FEB5 /* RRBusinessSummaryCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D89501EC1CBAB7860001FEB5 /* RRBusinessSummaryCollectionViewCell.m */; };
 		D89501F11CBACB1B0001FEB5 /* RRBusinessSummary.m in Sources */ = {isa = PBXBuildFile; fileRef = D89501F01CBACB1B0001FEB5 /* RRBusinessSummary.m */; };
 		D89501F41CBAD4790001FEB5 /* UIImage+StackBlur.m in Sources */ = {isa = PBXBuildFile; fileRef = D89501F31CBAD4790001FEB5 /* UIImage+StackBlur.m */; };
+		D89501F71CBAF1110001FEB5 /* RRBusinessDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D89501F61CBAF1110001FEB5 /* RRBusinessDetailViewController.m */; };
 		E7F7F3F86C1BB929B5D4DE6E /* libPods-Revirant.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 68BF82FBB2A95233BADEDE9F /* libPods-Revirant.a */; };
 /* End PBXBuildFile section */
 
@@ -50,6 +51,8 @@
 		D89501F01CBACB1B0001FEB5 /* RRBusinessSummary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RRBusinessSummary.m; sourceTree = "<group>"; };
 		D89501F21CBAD4790001FEB5 /* UIImage+StackBlur.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+StackBlur.h"; sourceTree = "<group>"; };
 		D89501F31CBAD4790001FEB5 /* UIImage+StackBlur.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+StackBlur.m"; sourceTree = "<group>"; };
+		D89501F51CBAF1110001FEB5 /* RRBusinessDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RRBusinessDetailViewController.h; sourceTree = "<group>"; };
+		D89501F61CBAF1110001FEB5 /* RRBusinessDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RRBusinessDetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +105,8 @@
 				D818D93D1CBA22E500A8F202 /* AppDelegate.m */,
 				D818D93F1CBA22E500A8F202 /* ViewController.h */,
 				D818D9401CBA22E500A8F202 /* ViewController.m */,
+				D89501F51CBAF1110001FEB5 /* RRBusinessDetailViewController.h */,
+				D89501F61CBAF1110001FEB5 /* RRBusinessDetailViewController.m */,
 				D818D9421CBA22E500A8F202 /* Main.storyboard */,
 				D818D9451CBA22E500A8F202 /* Assets.xcassets */,
 				D818D9471CBA22E500A8F202 /* LaunchScreen.storyboard */,
@@ -283,6 +288,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D89501F71CBAF1110001FEB5 /* RRBusinessDetailViewController.m in Sources */,
 				D89501F41CBAD4790001FEB5 /* UIImage+StackBlur.m in Sources */,
 				D818D95D1CBA348700A8F202 /* RRUtilities.m in Sources */,
 				D818D9411CBA22E500A8F202 /* ViewController.m in Sources */,
