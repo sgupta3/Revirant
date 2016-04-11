@@ -24,6 +24,7 @@ static const CGFloat kRRBusinessSummaryCellSpacing = 4.0;
 @property (nonatomic, weak) IBOutlet UICollectionView *collectionView;
 @property (nonatomic, strong) NSMutableArray *businessSummaries;
 @property (nonatomic, strong) RRBusinessSummary *businessSelected;
+@property (nonatomic, strong) UIActivityIndicatorView *activityIndicator;
 @end
 
 @implementation ViewController
@@ -43,6 +44,8 @@ static const CGFloat kRRBusinessSummaryCellSpacing = 4.0;
     self.collectionView.emptyDataSetSource = self;
     self.collectionView.emptyDataSetDelegate = self;
     
+    [self setupActivityIndicator];
+    
 }
 
 #pragma mark - Search Bar
@@ -52,7 +55,7 @@ static const CGFloat kRRBusinessSummaryCellSpacing = 4.0;
     [self determineUserLocationAndFindBusinesses];
 }
 
-#pragma mark <UICollectionViewDataSource>
+#pragma mark - UICollectionViewDataSource
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
     return 1;
@@ -124,6 +127,7 @@ static const CGFloat kRRBusinessSummaryCellSpacing = 4.0;
 
 -(void) fetchRestaurantsWithTerm:(NSString *)term location:(CLLocation *)location {
     YelpAPINetworkClient *client = [[YelpAPINetworkClient alloc] init];
+    [self.activityIndicator startAnimating];
     [client queryBusinessesWithTerm:term location:location
                         withSuccess:^(NSArray *businesses) {
                             [self sortAndProccessBusinessesArray:businesses];
@@ -131,6 +135,7 @@ static const CGFloat kRRBusinessSummaryCellSpacing = 4.0;
                             NSLog(@"%@",error);
                         } always:^{
                             self.currentLocation = nil;
+                            [self.activityIndicator stopAnimating];
                         } session:[NSURLSession sharedSession]];
 }
 
@@ -147,6 +152,14 @@ static const CGFloat kRRBusinessSummaryCellSpacing = 4.0;
         [self.businessSummaries addObject:summary];
     }];
     [self.collectionView reloadData];
+}
+
+- (void) setupActivityIndicator {
+    self.activityIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhite];
+    UIBarButtonItem *rightBarButton = [[UIBarButtonItem alloc] initWithCustomView:self.activityIndicator];
+    self.navigationItem.rightBarButtonItem = rightBarButton;
+    
+    
 }
 
 - (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
