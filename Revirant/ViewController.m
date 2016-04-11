@@ -18,13 +18,14 @@ static const CGFloat kRRBusinessSummaryCellSpacing = 4.0;
 
 @interface ViewController () <CLLocationManagerDelegate, UISearchBarDelegate, DZNEmptyDataSetSource, DZNEmptyDataSetDelegate>
 @property (nonatomic, strong) CLLocationManager *locationManager;
-@property (nonatomic, weak) IBOutlet UISearchBar *searchBar;
 @property (nonatomic, strong) NSString *queryString;
 @property (nonatomic, strong) CLLocation *currentLocation;
-@property (nonatomic, weak) IBOutlet UICollectionView *collectionView;
 @property (nonatomic, strong) NSMutableArray *businessSummaries;
 @property (nonatomic, strong) RRBusinessSummary *businessSelected;
 @property (nonatomic, strong) UIActivityIndicatorView *activityIndicator;
+
+@property (nonatomic, weak) IBOutlet UICollectionView *collectionView;
+@property (nonatomic, weak) IBOutlet UISearchBar *searchBar;
 @end
 
 @implementation ViewController
