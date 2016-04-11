@@ -5,4 +5,5 @@
 
 target 'Revirant' do
   pod 'TDOAuth', '~> 1.1'
+  pod 'DZNEmptyDataSet'
 end
