@@ -14,11 +14,10 @@
 -(id) initWithDictionary:(NSDictionary *)dictionary {
     self = [super init];
     if(self){
-        #warning Type safe all of these
-        self.businessID = dictionary[@"id"];
-        self.imageUrl = [NSURL URLWithString:dictionary[@"image_url"]];
-        self.name = dictionary[@"name"];
-        self.address = dictionary[@"location"][@"address"][0];
+        self.businessID = [self sanitizeString:dictionary[@"id"]];
+        self.imageUrl = [NSURL URLWithString:[self sanitizeString:dictionary[@"image_url"]]];
+        self.name = [self sanitizeString:dictionary[@"name"]];
+        self.address = [self santizeAddress:dictionary];
     }
     return self;
 }
@@ -36,6 +35,26 @@
             completion([image stackBlur:5]);
         });
     });
+}
+
+#pragma mark - Sanitizers
+
+- (NSString *) santizeAddress:(NSDictionary *)businessInfo {
+    NSString *address = @"Not available";
+    if ([businessInfo[@"location"][@"address"] count] > 0) {
+        NSString *city = businessInfo[@"location"][@"city"] == nil ? @"" : businessInfo[@"location"][@"city"];
+        address = [NSString stringWithFormat:@"%@, %@", businessInfo [@"location"][@"address"][0], city];
+    }
+    return address;
+}
+
+#pragma mark - Helpers
+
+- (NSString *) sanitizeString:(NSString *)string {
+    if ( string == (id)[NSNull null] || string.length == 0){
+        return @"";
+    }
+    return string;
 }
 
 @end
