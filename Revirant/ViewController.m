@@ -119,7 +119,7 @@ static const CGFloat kRRBusinessSummaryCellSpacing = 4.0;
     
     if ([locations lastObject] != nil && self.currentLocation == nil) {
         self.currentLocation = [locations lastObject];
-        NSLog(@"%@",self.currentLocation);
+        //NSLog(@"%@",self.currentLocation);
         [self fetchRestaurantsWithTerm:self.queryString location:self.currentLocation];
     }
 }
